@@ -52,7 +52,7 @@ fi
 
 case "$1" in
   -h|help)  ARGS=$1 ;;
-  *)        ARGS="$PROTOCOL $ARGS -config /.ngrok -log stdout $* $FWD" ;;
+  *)        ARGS="$PROTOCOL $ARGS $* $FWD" ;;
 esac
 
 exec /bin/ngrok $ARGS

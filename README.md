@@ -14,6 +14,10 @@ An Ngrok v2 container based on wizardapps/ngrok and wizardapps/ngrok that is des
 
 ## Examples
 
-`docker run --rm --link nginx_container:http -e "NGROK_HEADER=customdomain.com" -e "NGROK_AUTH=***********************" grafikart/ngrok`
+Minimal configuration 
 
-You have to use your authkey since at the moment ngrok doesn't input the domain within the log, without key you won't be able to get the *****.ngrok.io domain name 
+`docker run --rm -ti --link nginx_container:http grafikart/ngrok`
+
+Running using a custom header and an Auth Key
+
+`docker run --rm -ti --link nginx_container:http -e "NGROK_HEADER=customdomain.com" -e "NGROK_AUTH=***********************" grafikart/ngrok`
