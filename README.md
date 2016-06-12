@@ -11,6 +11,7 @@ An Ngrok v2 container based on wizardapps/ngrok and wizardapps/ngrok that is des
 - `NGROK_USERNAME` - Username to use for HTTP authentication on the tunnel. You must also specify an authentication token
 - `NGROK_PASSWORD` - Password to use for HTTP authentication on the tunnel. You must also specify an authentication token
 - `NGROK_PROTOCOL` - Can either be “HTTP” or “TCP”, and it defaults to “HTTP” if not specified. If set to “TCP”, Ngrok will allocate a port instead of a subdomain and proxy TCP requests directly to your application.
+- `NGROK_REGION` - Ngrok location. Option of us, eu, ap and au
 
 ## Examples
 

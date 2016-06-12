@@ -50,6 +50,10 @@ elif [ -n "$NGROK_USERNAME" ] || [ -n "$NGROK_PASSWORD" ]; then
   fi
 fi
 
+if [ -n "$NGROK_REGION" ]; then
+    ARGS="$ARGS -region $NGROK_REGION "
+fi;
+
 case "$1" in
   -h|help)  ARGS=$1 ;;
   *)        ARGS="$PROTOCOL $ARGS $* $FWD" ;;
